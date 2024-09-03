@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { SidebarLayout } from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,12 +37,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col flex-1 w-full h-screen mx-auto overflow-hidden md:flex-row max-w-screen-2xl">
+          <div className="flex flex-col flex-1 w-full min-h-screen mx-auto overflow-hidden md:flex-row max-w-screen-2xl">
             <SidebarLayout />
             <div className="flex flex-1">
-              <div className="flex flex-col flex-1 w-full h-full gap-2 p-2 border md:p-10 rounded-tl-2xl border-brand/50 dark:border-neutral-700 bg-background">
-                {children}
-              </div>
+              <BackgroundBeamsWithCollision>
+                <div className="flex flex-col flex-1 w-full h-full gap-2 p-2 border md:p-10 rounded-tl-2xl border-brand/50 dark:border-neutral-700 bg-background">
+                  {children}
+                </div>
+              </BackgroundBeamsWithCollision>
             </div>
           </div>
         </ThemeProvider>

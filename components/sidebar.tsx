@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Contact, ScanIcon, StoreIcon, Users2 } from "lucide-react";
+import { Contact, MessageSquareWarning, StoreIcon, Users2 } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 
 export function SidebarLayout() {
@@ -29,7 +29,7 @@ export function SidebarLayout() {
       label: "Usage",
       href: "/usage",
       icon: (
-        <ScanIcon className="flex-shrink-0 w-6 h-6 text-neutral-700 dark:text-neutral-200" />
+        <MessageSquareWarning className="flex-shrink-0 w-6 h-6 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {

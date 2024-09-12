@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 import { SidebarLayout } from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
@@ -37,17 +38,18 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col flex-1 w-full min-h-screen mx-auto overflow-hidden md:flex-row max-w-screen-2xl">
+          <div className="flex flex-col flex-1 w-full h-screen mx-auto md:flex-row max-w-screen-2xl">
             <SidebarLayout />
             <div className="flex flex-1">
               <BackgroundBeamsWithCollision>
-                <div className="flex flex-col flex-1 w-full h-full gap-2 p-2 border md:p-10 rounded-tl-2xl border-brand/50 dark:border-neutral-700 bg-background">
+                <div className="flex flex-col flex-1 w-full h-full gap-2 p-2 border md:p-10 rounded-tl-2xl border-brand/50 dark:border-neutral-700 bg-background overflow-auto">
                   {children}
                 </div>
               </BackgroundBeamsWithCollision>
             </div>
           </div>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

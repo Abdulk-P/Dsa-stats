@@ -71,7 +71,7 @@ export function SidebarLayout() {
 export const Logo = () => {
   return (
     <Link
-      href="#"
+      href="/"
       className="relative z-20 flex items-center py-1 space-x-2 text-xl font-normal text-brand"
     >
       <Image src="/logo.png" alt="DSA Stats Logo" height={38} width={38} />
@@ -89,7 +89,7 @@ export const Logo = () => {
 export const LogoIcon = () => {
   return (
     <Link
-      href="#"
+      href="/"
       className="relative z-20 flex items-center py-1 space-x-2 text-sm font-black text-brand"
     >
       <Image src="/logo.png" alt="DSA Stats Logo" height={38} width={38} />

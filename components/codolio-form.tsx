@@ -3,6 +3,9 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import React, { useTransition } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useToast } from "@/hooks/use-toast";
+import useStore from "@/hooks/codolio-stats";
+import { scrapeCodolio } from "@/app/actions";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { CoolMode } from "@/components/cool-button";
@@ -16,14 +19,24 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-const CodolioFormSchema = z.object({
+export const CodolioFormSchema = z.object({
   username: z
     .string()
     .min(2, { message: "Username must be at least 2 characters." }),
 });
 
+type CodolioFormSchemaType = z.infer<typeof CodolioFormSchema>;
+
+interface CodolioStats {
+  totalQuestions: number;
+  totalContests: number;
+  awards: number;
+  username: string;
+}
 export default function CodolioForm() {
   const [isSubmitting, startTransition] = useTransition();
+  const { setResultData } = useStore();
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof CodolioFormSchema>>({
     resolver: zodResolver(CodolioFormSchema),
     defaultValues: {
@@ -32,8 +45,19 @@ export default function CodolioForm() {
   });
 
   const onSubmit = async (values: z.infer<typeof CodolioFormSchema>) => {
-    // fetch logic
-    console.log("Fetching data for:", values.username);
+    startTransition(async () => {
+      const data = await scrapeCodolio(values);
+      if (data && "error" in data) {
+        toast({
+          variant: "destructive",
+          title: "Uh oh! Something went wrong.",
+          description: `${data.error}`,
+        });
+      } else if (data) {
+        setResultData(data as CodolioStats);
+        // console.log("Fetched data for:", values.username);
+      }
+    });
   };
 
   return (
@@ -68,8 +92,12 @@ export default function CodolioForm() {
             particle: "/logo.png",
           }}
         >
-          <Button disabled={isSubmitting} type="submit" className="w-full">
-            Fetch
+          <Button
+            disabled={isSubmitting}
+            type="submit"
+            className="w-full text-black"
+          >
+            {isSubmitting ? "Fetching" : "Fetch"}
           </Button>
         </CoolMode>
       </form>

@@ -17,7 +17,7 @@ export async function scrapeCodolio(values: z.infer<typeof CodolioFormSchema>) {
       args: [...chromium.args, "--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: chromium.defaultViewport,
       executablePath: await chromium.executablePath(
-        `${process.env.CHROMIUM_LINK}`
+        `https://github.com/Sparticuz/chromium/releases/download/v127.0.0/chromium-v127.0.0-pack.tar`
       ),
       headless: chromium.headless,
     });
@@ -25,7 +25,6 @@ export async function scrapeCodolio(values: z.infer<typeof CodolioFormSchema>) {
     await page.goto(`https://codolio.com/profile/${username}`, {
       waitUntil: "networkidle2",
       timeout: 120000,
-
     });
 
     let totalQuestions = 0;

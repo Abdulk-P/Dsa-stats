@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import puppeteer from "puppeteer";
+import chromium from "@sparticuz/chromium-min";
 import { CodolioFormSchema } from "@/components/codolio-form";
 
 export async function scrapeCodolio(values: z.infer<typeof CodolioFormSchema>) {
@@ -13,12 +14,18 @@ export async function scrapeCodolio(values: z.infer<typeof CodolioFormSchema>) {
 
   try {
     const browser = await puppeteer.launch({
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      args: [...chromium.args, "--no-sandbox", "--disable-setuid-sandbox"],
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(
+        `${process.env.CHROMIUM_LINK}`
+      ),
+      headless: chromium.headless,
     });
     const page = await browser.newPage();
     await page.goto(`https://codolio.com/profile/${username}`, {
       waitUntil: "networkidle2",
       timeout: 120000,
+
     });
 
     let totalQuestions = 0;

@@ -4,8 +4,6 @@ import puppeteer from "puppeteer";
 import chromium from "@sparticuz/chromium-min";
 import { CodolioFormSchema } from "@/components/codolio-form";
 
-export const maxDuration = 60;
-
 export async function scrapeCodolio(values: z.infer<typeof CodolioFormSchema>) {
   const username = values.username;
   if (!username) {

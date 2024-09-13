@@ -14,6 +14,8 @@ type CodolioStats = {
 
 type ThemeName = keyof typeof themes;
 
+export const maxDuration = 60;
+
 export async function GET(request: Request, context: { params: Params }) {
   const url = new URL(request.url);
   const themeName = (url.searchParams.get("theme") || "default") as ThemeName;

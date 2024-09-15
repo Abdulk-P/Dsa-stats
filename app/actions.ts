@@ -9,7 +9,7 @@ export async function scrapeCodolio(values: z.infer<typeof CodolioFormSchema>) {
   if (!username) {
     return { error: "Enter username!" };
   }
-  // console.log("username:", username);
+  console.log("username:", username);
 
   try {
     const browser = await puppeteer.launch({

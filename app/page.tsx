@@ -1,8 +1,10 @@
 import { ArrowRightIcon } from "lucide-react";
 import CodolioForm from "@/components/codolio-form";
 import DisplayCard from "@/components/display-card";
+import CodeDisplay from "@/components/code-display";
 import AnimatedShinyText from "@/components/ui/shiny-text";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
+import { GithubActionMarkdownCode } from "@/lib/github-action-markdown-code";
 
 export default function Home() {
   return (
@@ -20,6 +22,15 @@ export default function Home() {
       </div>
       <div className="items-center justify-center w-full px-2 mx-auto">
         <DisplayCard />
+      </div>
+      <div className="items-center justify-center w-full px-2 mx-auto mt-2 sm:container">
+        <CodeDisplay
+          fileName="GitHub Actions Workflow Markdown"
+          language="markdown"
+          code={GithubActionMarkdownCode}
+          name="dsaStats"
+          extension="yml"
+        />
       </div>
     </main>
   );

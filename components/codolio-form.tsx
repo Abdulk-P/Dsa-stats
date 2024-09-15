@@ -47,11 +47,11 @@ export default function CodolioForm() {
   const onSubmit = async (values: z.infer<typeof CodolioFormSchema>) => {
     startTransition(async () => {
       const data = await scrapeCodolio(values);
-      if (data && "error" in data) {
+      if (!data) {
         toast({
           variant: "destructive",
           title: "Uh oh! Something went wrong.",
-          description: `${data.error}`,
+          duration: 1000,
         });
       } else if (data) {
         setResultData(data as CodolioStats);

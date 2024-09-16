@@ -8,7 +8,7 @@ on:
   push:
     branches:
       - main
-    schedule: # execute every 24 hours
+  schedule: # execute every 24 hours
       - cron: "0 0 * * *"
 
 jobs:

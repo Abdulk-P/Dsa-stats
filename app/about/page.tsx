@@ -15,7 +15,7 @@ export default function AboutPage() {
       <div className="my-4 flex-col flex lg:grid lg:grid-cols-12 sm:mx-4 lg:mx-0">
         <div className="text-muted-foreground col-span-4">
           <h1 className="mb-8 lg:pl-8 tracking-tighter text-6xl">
-            Welcome to <span className="text-gradient">DSA Stats</span>
+            Welcome to <span className="text-brand">DSA Stats</span>
           </h1>
         </div>
         <div className="col-start-6 col-span-5 text-2xl leading-[130%] text-muted-foreground font-medium space-y-7">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 import { SidebarLayout } from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -112,6 +113,7 @@ export default function RootLayout({
               <BackgroundBeamsWithCollision>
                 <div className="flex flex-col flex-1 w-full h-full gap-2 p-2 border md:p-10 rounded-tl-2xl border-brand/50 dark:border-neutral-700 bg-background overflow-auto">
                   {children}
+                  <Footer />
                 </div>
               </BackgroundBeamsWithCollision>
             </div>

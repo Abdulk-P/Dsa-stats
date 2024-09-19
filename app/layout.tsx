@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 import { SidebarLayout } from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
+import BlindContextProvider from "@/lib/blind-context-provider";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -107,17 +108,19 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col flex-1 w-full h-screen mx-auto md:flex-row max-w-screen-2xl">
-            <SidebarLayout />
-            <div className="flex flex-1">
-              <BackgroundBeamsWithCollision>
-                <div className="flex flex-col flex-1 w-full h-full gap-2 p-2 border md:p-10 rounded-tl-2xl border-brand/50 dark:border-neutral-700 bg-background overflow-auto">
-                  {children}
-                  <Footer />
-                </div>
-              </BackgroundBeamsWithCollision>
+          <BlindContextProvider>
+            <div className="flex flex-col flex-1 w-full h-screen mx-auto md:flex-row max-w-screen-2xl">
+              <SidebarLayout />
+              <div className="flex flex-1">
+                <BackgroundBeamsWithCollision>
+                  <div className="flex flex-col flex-1 w-full h-full gap-2 p-2 border md:p-10 rounded-tl-2xl border-brand/50 dark:border-neutral-700 bg-background overflow-auto">
+                    {children}
+                    <Footer />
+                  </div>
+                </BackgroundBeamsWithCollision>
+              </div>
             </div>
-          </div>
+          </BlindContextProvider>
         </ThemeProvider>
         <Toaster />
       </body>

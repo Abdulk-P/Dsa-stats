@@ -48,7 +48,7 @@ export default function Footer() {
                 <span className="font-bold tracking-wider hover:underline hover:underline-offset-2 text-brand">
                   KMaar Miscellaneous Studio
                 </span>
-              </Link>
+              </Link>{" "}
               <Link
                 className="relative w-full overflow-y-hidden hover:underline hover:underline-offset-2 "
                 target="_blank"

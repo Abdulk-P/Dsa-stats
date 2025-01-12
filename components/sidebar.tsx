@@ -80,7 +80,7 @@ export const Logo = () => {
         animate={{ opacity: 1 }}
         className="font-black whitespace-pre text-brand"
       >
-        DSA
+        DSA Tracker
       </motion.span>
     </Link>
   );

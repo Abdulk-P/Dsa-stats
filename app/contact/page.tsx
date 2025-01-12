@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/contact-form";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with the DSA Stats team for support, feedback, or inquiries. We’re here to help you showcase your Data Structures and Algorithms skills effectively on your GitHub profile. Contact us today!",
+    "Get in touch with the DSA Tracker team for support, feedback, or inquiries. We’re here to help you showcase your Data Structures and Algorithms skills effectively on your GitHub profile. Contact us today!",
 };
 
 export default function ContactPage() {

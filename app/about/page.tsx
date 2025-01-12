@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Discover DSA Stats, the ultimate tool for showcasing your Data Structures and Algorithms skills on GitHub. Highlight your achievements, contest participation, and problem-solving stats with customizable themes. Join the community and let your coding skills shine!",
+    "Discover DSA Tracker, the ultimate tool for showcasing your Data Structures and Algorithms skills on GitHub. Highlight your achievements, contest participation, and problem-solving stats with customizable themes. Join the community and let your coding skills shine!",
 };
 
 export default function AboutPage() {
@@ -15,17 +15,17 @@ export default function AboutPage() {
       <div className="my-4 flex-col flex lg:grid lg:grid-cols-12 sm:mx-4 lg:mx-0">
         <div className="text-muted-foreground col-span-4">
           <h1 className="mb-8 lg:pl-8 tracking-tighter text-6xl">
-            Welcome to <span className="text-brand">DSA Stats</span>
+            Welcome to <span className="text-brand">DSA Tracker</span>
           </h1>
         </div>
         <div className="col-start-6 col-span-5 text-2xl leading-[130%] text-muted-foreground font-medium space-y-7">
           <p className="space-y-4 flex flex-col">
             <span>
-              DSA Stats is your ultimate companion for showcasing your Data
+              DSA Tracker is your ultimate companion for showcasing your Data
               Structures and Algorithms (DSA) skills directly on your GitHub
               profile README. Whether you’re a competitive programmer, a coding
               enthusiast, or someone looking to highlight their problem-solving
-              prowess, DSA Stats provides a visually appealing and interactive
+              prowess, DSA Tracker provides a visually appealing and interactive
               way to display your achievements and progress.{" "}
             </span>
             <span>
@@ -62,14 +62,14 @@ export default function AboutPage() {
             </span>
             <span>
               Thank you to Pranjal Pratap Singh for inspiring this project.
-              While DSA Stats builds upon his original concept, it introduces
+              While DSA Tracker builds upon his original concept, it introduces
               several enhancements, including extensive customization options
               and additional features to better showcase your DSA skills. Thank
               you to Codolio for providing a platform that aggregates these
               stats into a single, public-friendly format.
             </span>
             <span>
-              Thank you for choosing DSA Stats! We are excited to be a part of
+              Thank you for choosing DSA Tracker! We are excited to be a part of
               your journey towards mastering Data Structures and Algorithms.
               Together, let’s showcase your skills and achievements, and make
               your profile shine. We look forward to supporting you every step

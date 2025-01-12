@@ -9,12 +9,14 @@ export default function Footer() {
           <div className="flex items-center mb-4 md:mb-0">
             <Image
               src="/logo.png"
-              alt="DSA Stats Readme Github Logo"
+              alt="DSA Tracker Readme Github Logo"
               width={40}
               height={40}
               className="mr-2"
             />
-            <span className="text-xl font-semibold text-brand">DSA Stats</span>
+            <span className="text-xl font-semibold text-brand">
+              DSA Tracker
+            </span>
           </div>
 
           <div className="text-center mb-4 md:mb-0">
@@ -45,6 +47,16 @@ export default function Footer() {
               >
                 <span className="font-bold tracking-wider hover:underline hover:underline-offset-2 text-brand">
                   KMaar Miscellaneous Studio
+                </span>
+              </Link>
+              <Link
+                className="relative w-full overflow-y-hidden hover:underline hover:underline-offset-2 "
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://dsastats.site/"
+              >
+                <span className="font-bold tracking-wider hover:underline hover:underline-offset-2 text-brand">
+                  dsaStats
                 </span>
               </Link>
             </p>

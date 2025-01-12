@@ -13,11 +13,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_URL}`),
   title: {
-    default: "DSA Stats for GitHub Readme Codolio",
-    template: "%s - DSA Stats for GitHub Readme Codolio",
+    default: "DSA Tracker for GitHub Readme Codolio",
+    template: "%s - DSA Tracker for GitHub Readme Codolio",
   },
   description:
-    "Stand out in the competitive programming world with DSA Stats. Showcase your DSA skills, achievements, and contest participation on your GitHub profile. Perfect for job applications, hackathons, and sharing progress with the community.",
+    "Stand out in the competitive programming world with DSA Tracker. Showcase your DSA skills, achievements, and contest participation on your GitHub profile. Perfect for job applications, hackathons, and sharing progress with the community.",
   twitter: {
     card: "summary_large_image",
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "Abhishek Kumar", url: "https://kmaar.vercel.app" }],
   keywords: [
-    "DSA Stats",
+    "DSA Tracker",
     "Data Structures and Algorithms",
     "DSA skills",
     "Abhishek Kumar",

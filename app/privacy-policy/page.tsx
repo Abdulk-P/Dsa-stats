@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Explore the Privacy Policy of DSA Stats to understand how we protect your data and respect your privacy. Learn about our commitment to transparency and security.",
+    "Explore the Privacy Policy of DSA Tracker to understand how we protect your data and respect your privacy. Learn about our commitment to transparency and security.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
         <div className="col-start-6 col-span-5 text-2xl leading-[130%] text-muted-foreground font-medium space-y-7">
           <p className="space-y-4 flex flex-col">
             <span>
-              Welcome to DSA Stats! We value your privacy and are committed to
+              Welcome to DSA Tracker! We value your privacy and are committed to
               protecting your personal information. This Privacy Policy outlines
               how we collect, use, and safeguard your data when you use our web
               app. Please take a moment to review our privacy policy:
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
             </span>
             <span>
               If you have any questions or concerns, feel free to reach out to
-              our team. Thank you for trusting DSA Stats!
+              our team. Thank you for trusting DSA Tracker!
             </span>
           </p>
           <p className="text-sm">

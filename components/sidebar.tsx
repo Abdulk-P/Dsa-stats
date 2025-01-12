@@ -74,13 +74,13 @@ export const Logo = () => {
       href="/"
       className="relative z-20 flex items-center py-1 space-x-2 text-xl font-normal text-brand"
     >
-      <Image src="/logo.png" alt="DSA Stats Logo" height={38} width={38} />
+      <Image src="/logo.png" alt="DSA Tracker Logo" height={38} width={38} />
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="font-black whitespace-pre text-brand"
       >
-        DSA Stats
+        DSA
       </motion.span>
     </Link>
   );
@@ -92,7 +92,7 @@ export const LogoIcon = () => {
       href="/"
       className="relative z-20 flex items-center py-1 space-x-2 text-sm font-black text-brand"
     >
-      <Image src="/logo.png" alt="DSA Stats Logo" height={38} width={38} />
+      <Image src="/logo.png" alt="DSA Tracker Logo" height={38} width={38} />
     </Link>
   );
 };

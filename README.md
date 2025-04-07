@@ -81,16 +81,3 @@ Contributions are what make the open-source community such an amazing place to l
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## License
-
-Distributed under the GNU GENERAL PUBLIC LICENSE v3.0 License. See `LICENSE` for more information.
-
-## Acknowledgements
-
-- Thank you to Pranjal Pratap Singh for inspiring this project.
-- Thank you to Codolio for providing a platform that aggregates these stats into a single, public-friendly format.
-
-## Contact
-
-Abhishek Kumar - [LinkedIn](https://www.linkedin.com/in/AbhishekKMaar) - [Website](https://KMaar.vercel.app)

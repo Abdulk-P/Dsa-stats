@@ -31,22 +31,21 @@ export default function Footer() {
                 href="https://kmaar.vercel.app/"
               >
                 <span className="font-bold tracking-wider hover:underline hover:underline-offset-2 text-brand">
-                  Abhishek Kumar
+                  Abdulkhadar 
                 </span>
               </Link>
             </p>
             <p className="text-sm">
-              <p className="w-fit flex-nowrap whitespace-nowrap">
+              <span className="w-fit flex-nowrap whitespace-nowrap">
                 All rights reserved | Powered by
-              </p>
+              </span>
               <Link
                 className="relative w-full overflow-y-hidden hover:underline hover:underline-offset-2 "
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://kmstudio.vercel.app/"
+                href="https://github.com/Abdulk-P"
               >
                 <span className="font-bold tracking-wider hover:underline hover:underline-offset-2 text-brand">
-                  KMaar Miscellaneous Studio
                 </span>
               </Link>{" "}
               <Link

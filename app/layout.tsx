@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     google: "w3roI87t-dIyKe7ReAdSWUVpWCe7K1pP_EXUidsZ3xI",
     me: "KMaar",
   },
-  authors: [{ name: "Abhishek Kumar", url: "https://kmaar.vercel.app" }],
+  authors: [{ name: "Abdulkhadar Patel", url: "https://kmaar.vercel.app" }],
   keywords: [
     "DSA Tracker",
     "Data Structures and Algorithms",

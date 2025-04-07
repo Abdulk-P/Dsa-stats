@@ -78,26 +78,10 @@ export default function AboutPage() {
           </p>
           <div className="flex items-center gap-x-3">
             <div className="">
-              <Image
-                width={50}
-                height={50}
-                className="h-10 w-10 rounded-full"
-                src="/KMaar.png"
-                alt="Profile Headshot of Abhishek KMaar Kumar"
-              />
+              
             </div>
             <div className="text-balck dark:text-white text-base xl:text-xl 2xl:text-2xl font-medium flex flex-col">
-              <p className="leading-tight">Abhishek Kumar</p>
-              <span className="">
-                <Link
-                  className="leading-tight text-muted-foreground font-normal cursor-pointer hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://kmaar.vercel.app/"
-                >
-                  KMaar.vercel.app
-                </Link>
-              </span>
+              <p className="leading-tight">Abdulkhadar Patel</p>
             </div>
           </div>
         </div>
